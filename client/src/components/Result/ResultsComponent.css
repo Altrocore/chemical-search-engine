@@ -1,0 +1,69 @@
+.results-list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+.el-header-container {
+  display: flex;
+  min-height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  border-bottom: 1px solid #737272;
+  border-top: 1px solid #737272;
+  top: 0;
+  background-image: url('../../Picture1123.jpg');
+  background-size: contain;
+}
+.results-list-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  display: flex;
+}
+
+.no-results {
+  color: #555;
+  margin-top: 10px;
+  text-align: center;
+}
+.el-name {
+  display: inline-block;
+  width: 25%;
+}
+.el-symbol {
+  display: inline-block;
+  width: 15%;
+}
+.el-at-number {
+  display: inline-block;
+  width: 30%;
+}
+.el-at-mass {
+  display: inline-block;
+  width: 30%;
+}
+#results-container {
+  width: 100%;
+  position: relative;
+}
+.header-title {
+  text-align: center;
+}
+.results-list-item span {
+  text-align: center;
+  font-size: larger;
+}
+.el-header-container span {
+  text-align: center;
+  cursor: pointer;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.el-header-container span:hover {
+  color: #4099ea;
+}
+.title-mongo {
+  border-bottom: 1px solid #737272;
+  padding-bottom: 16px;
+}

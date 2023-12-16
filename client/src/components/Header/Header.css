@@ -1,0 +1,8 @@
+.header-container {
+  width: 62%;
+  text-align: center;
+}
+.header-container span {
+  display: inline-block;
+  padding-top: 16px;
+}
