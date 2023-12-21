@@ -7,9 +7,9 @@ const Header = () => {
     <div className="header-container">
         <h1>Search App</h1>
         <h3>
-          This is a chemical elements search app. 
+          <span>This is a chemical elements search app. 
           You can search for elements by their name, 
-          by their symbol, by their atomic number, or atomic mass.
+          by their symbol, by their atomic number, or atomic mass.</span>
           <br/>
           <span>You can search in both databases or choose one of them.</span>
           <br/>

@@ -1,12 +1,15 @@
 /* SearchComponent.css */
 .App {
-  padding-top: 50px;
+  padding-top: 12px;
   min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+.App .header-container, .App #search-container {
+  color: #fff;
+  text-shadow: 0 0 5px #000, 0 0 12px #000;
+}
 
 

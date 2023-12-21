@@ -5,9 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('./Picture1123.jpg');
+  background-image: url('./images/Picture222221.jpg');
   /* Adjust background properties as needed */
-  background-size: cover; /* Cover the entire viewport */
+  background-size: 130%; /* Cover the entire viewport */
   background-position: center; /* Center the image */
   background-repeat: repeat; /* repeat the image */
 }

@@ -2,7 +2,10 @@
   width: 62%;
   text-align: center;
 }
-.header-container span {
+.header-container span, .header-container h3 {
   display: inline-block;
-  padding-top: 16px;
+  font-size: 20px;
+}
+.header-container span {
+  padding-bottom: 12px;
 }

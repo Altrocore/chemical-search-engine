@@ -1,0 +1,49 @@
+.login-container {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image: url('../../images/Picture1123.jpg');
+  /* Adjust background properties as needed */
+  background-size: 55%; /* Cover the entire viewport */
+  background-position: center; /* Center the image */
+  background-repeat: repeat; /* repeat the image */
+  color: #000000;
+  margin-top: 10%;
+}
+
+.login-container h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: larger;
+  font-weight: 700;
+
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: 700;
+  margin-top: 18px;
+}

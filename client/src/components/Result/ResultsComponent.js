@@ -112,15 +112,15 @@ const ResultsComponent = ({ results }) => {
         {results.postgresResults.length > 0 || results.mongoResults.length > 0 ? (
         
             <ul className="results-list">
+                <h2 className="el-header-container">
+                    <span className="el-name" onClick={() => sortElements("name")}> Name </span> 
+                    <span className="el-symbol" onClick={() => sortElements("symbol")}> Symbol </span> 
+                    <span className="el-at-number" onClick={() => sortByAtomicNumber()}> Atomic number </span> 
+                    <span className="el-at-mass" onClick={() => sortByMass("atomic_mass")}> Atomic mass </span> 
+                </h2>
                 { results.postgresResults.length > 0 && 
                     <>
-                        <h2 className="header-title">PostgreSQL results:</h2>
-                        <h2 className="el-header-container">
-                            <span className="el-name" onClick={() => sortElements("name")}> Name </span> 
-                            <span className="el-symbol" onClick={() => sortElements("symbol")}> Symbol </span> 
-                            <span className="el-at-number" onClick={() => sortByAtomicNumber()}> Atomic number </span> 
-                            <span className="el-at-mass" onClick={() => sortByMass("atomic_mass")}> Atomic mass </span> 
-                        </h2>
+                        <h2 className="header-title title-mongo">PostgreSQL results:</h2>
                         {sortedPg.map((result) => (
                             <li key={result.id || result._id} className="results-list-item">
                                 <span className="el-name">{ result.name }</span> 

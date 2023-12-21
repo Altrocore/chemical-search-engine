@@ -12,7 +12,7 @@
   border-bottom: 1px solid #737272;
   border-top: 1px solid #737272;
   top: 0;
-  background-image: url('../../Picture1123.jpg');
+  background-image: url('../../images/Picture1123.jpg');
   background-size: contain;
 }
 .results-list-item {
@@ -23,7 +23,6 @@
 }
 
 .no-results {
-  color: #555;
   margin-top: 10px;
   text-align: center;
 }
@@ -52,18 +51,24 @@
 }
 .results-list-item span {
   text-align: center;
-  font-size: larger;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: system-ui, sans;
 }
 .el-header-container span {
   text-align: center;
   cursor: pointer;
   padding-bottom: 10px;
   padding-top: 10px;
+  color: #000;
+  text-shadow: none;
+
 }
 .el-header-container span:hover {
   color: #4099ea;
 }
 .title-mongo {
-  border-bottom: 1px solid #737272;
+  border-bottom: 1px solid #ccc;
   padding-bottom: 16px;
+  margin-bottom: 10px;
 }
