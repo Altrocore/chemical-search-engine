@@ -47,3 +47,13 @@
   font-weight: 700;
   margin-top: 18px;
 }
+.signUpbtn {
+  background: transparent;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 14px;
+}
+.signUpbtn-wrapper {
+  text-align: center;
+}
