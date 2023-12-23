@@ -17,9 +17,8 @@ const Login = () => {
   const handleSignup = (e) => {
     e.preventDefault();
     // Make a signup request to the server
-    axios.post('http://localhost:3001/api/signup', { 
-        params: { username, password } 
-      })
+    axios.post('http://localhost:3001/api/auth/signup', { username, password } 
+      )
       .then(response => {
         console.log(response.data);
       })
