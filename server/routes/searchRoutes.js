@@ -1,5 +1,5 @@
 const express = require('express');
-require('dotenv').config(); // Убедитесь, что это вызывается перед использованием process.env
+require('dotenv').config();
 const ChemicalElementPG = require('../models/pgModel');
 const ChemicalElementMongo = require('../models/mongoModel');
 const logger = require('../logs/logger');
@@ -13,7 +13,6 @@ router.get('/', async (req, res) => {
         let pgResults = [];
         let mongoResults = [];
 
-        // Для числового поиска используем только если term является числом
         const searchTermNumber = !isNaN(term) ? Number(term) : null;
 
         // PostgreSQL search
@@ -35,7 +34,7 @@ router.get('/', async (req, res) => {
         logger.error('Error during search:', error);
         res.status(500).json({
             message: 'Error during search',
-            error: error.message, // Лучше использовать error.message для информации о типе ошибки
+            error: error.message,
         });
     }
 });

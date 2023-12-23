@@ -1,7 +1,7 @@
 const LocalStrategy = require('passport-local').Strategy;
 const JwtStrategy = require('passport-jwt').Strategy;
 const { ExtractJwt } = require('passport-jwt');
-const User = require('./models/User');
+const User = require('../models/user');
 
 module.exports = function(passport) {
   passport.use(new LocalStrategy((username, password, done) => {

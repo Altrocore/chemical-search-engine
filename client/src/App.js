@@ -15,10 +15,11 @@ const router = createBrowserRouter([
     },
     {
       path: "/search",
-      element:  <>
-                    <Header></Header>
-                    <SearchComponent />
-                </>,    
+      element:  
+        <>
+            <Header></Header>
+            <SearchComponent />
+        </>,    
     },
   ]);
   
