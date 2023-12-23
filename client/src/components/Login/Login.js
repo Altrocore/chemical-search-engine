@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import './Login.css';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import e from "express";
 
 const Login = () => {
 
@@ -21,35 +20,39 @@ const Login = () => {
     setPassword(event.target.value);
   };
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-    if (signUpPassword === repeatPassword && signUpName !== "") {
-      
-      axios.post('/api/auth/signup', { username: signUpName, password: signUpPassword } 
-        )
-        .then(response => {
-          console.log(response.data)
-          console.log(signUpName)
-          navigate("/search");
-        })
-        .catch(error => {
-          console.error(error.response.data);
-        });
-      }
-    
+    if (signUpPassword !== repeatPassword) {
+      console.error("Passwords don't match.");
+      return;
+    }
+    if (signUpName === "") {
+      console.error("Username cannot be empty.");
+      return;
+    }
+    try {
+      const response = await axios.post('/api/auth/signup', {
+        username: signUpName,
+        password: signUpPassword
+      });
+      console.log(response.data);
+      navigate("/search");
+    } catch (error) {
+      console.error(error.response ? error.response.data : error.message);
+    }
   };
 
-  const handleLogin = () => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    axios.post('/api/login', { username, password })
-      .then(response => {
-        console.log(response.data);
-        // Handle success, maybe store the token in local storage or a cookie
-      })
-      .catch(error => {
-        console.error(error.response.data);
-        // Handle error, maybe show an error message to the user
+    try {
+      const response = await axios.post('/api/auth/login', {
+         username, password 
       });
+      console.log(response.data);
+      navigate("/search");
+    } catch (error) {
+      console.error(error.response ? error.response.data : error.message);
+    }
   };
 
   return (
